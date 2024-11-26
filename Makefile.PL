@@ -15,7 +15,7 @@ EOPS
 my @podpms = map { $_.".pod", '$(INST_LIBDIR)/' . $_ .".pod"} qw/pdl2/;
 WriteMakefile(
   NAME => 'PDL::Perldl2',
-  VERSION => '2.000',
+  VERSION => '2.001',
   AUTHOR => "Chris Marshall <chm at cpan dot org>",
   LICENSE => 'perl',
   MIN_PERL_VERSION => '5.016',
