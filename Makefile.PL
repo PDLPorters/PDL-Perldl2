@@ -15,7 +15,7 @@ EOPS
 my @podpms = map { $_.".pod", '$(INST_LIBDIR)/' . $_ .".pod"} qw/pdl2/;
 WriteMakefile(
   NAME => 'PDL::Perldl2',
-  VERSION => '2.001',
+  VERSION_FROM => 'Script.pm',
   AUTHOR => "Chris Marshall <chm at cpan dot org>",
   LICENSE => 'perl',
   MIN_PERL_VERSION => '5.016',
@@ -30,7 +30,6 @@ WriteMakefile(
     'namespace::clean' => 0,
     'Devel::REPL' => 0,
     'Devel::REPL::Plugin' => 0,
-    'Term::ReadLine::Perl' => 0,
   },
   META_MERGE => {
     "meta-spec" => { version => 2 },

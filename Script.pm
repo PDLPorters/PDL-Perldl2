@@ -47,4 +47,8 @@ sub load_rcfile {
 
 # Global and local startup
 
+# PAUSE insists this package be here, so:
+package PDL::Perldl2;
+our $VERSION = '2.002';
+
 1;
