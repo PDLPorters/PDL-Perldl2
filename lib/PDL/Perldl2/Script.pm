@@ -49,6 +49,6 @@ sub load_rcfile {
 
 # PAUSE insists this package be here, so:
 package PDL::Perldl2;
-our $VERSION = '2.002';
+our $VERSION = '2.003';
 
 1;
