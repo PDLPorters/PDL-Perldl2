@@ -2,17 +2,6 @@ use strict;
 use warnings;
 use ExtUtils::MakeMaker;
 
-# Extra build target to build the doc database
-sub MY::postamble {
-   <<"EOPS";
-
-pdl2.pod : pdl2
-\t\$(PERLRUN) -MPod::Select -e "podselect('pdl2');" > pdl2.pod
-
-EOPS
-}
-
-my @podpms = map { $_.".pod", '$(INST_LIBDIR)/' . $_ .".pod"} qw/pdl2/;
 WriteMakefile(
   NAME => 'PDL::Perldl2',
   VERSION_FROM => 'Script.pm',
@@ -20,7 +9,7 @@ WriteMakefile(
   LICENSE => 'perl',
   MIN_PERL_VERSION => '5.016',
   EXE_FILES => [ 'pdl2' ],
-  PM => { 'Script.pm' => '$(INST_LIBDIR)/Perldl2/Script.pm', @podpms },
+  PM => { 'Script.pm' => '$(INST_LIBDIR)/Perldl2/Script.pm' },
   CONFIGURE_REQUIRES => {
     'ExtUtils::MakeMaker' => '7.14',
   },
