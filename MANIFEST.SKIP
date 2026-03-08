@@ -12,5 +12,3 @@ pm_to_blib$
 ^\.git
 
 \.sw.$
-
-pdl2\.pod$
