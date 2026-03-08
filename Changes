@@ -1,3 +1,5 @@
+- use lib/ repo layout, pdl2 assumes deps present
+
 2.002 2024-11-26
 - upload with "PDL::Perldl2" in a .pm
 
